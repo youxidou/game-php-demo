@@ -10,7 +10,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
-    <script src="//gg.yxd17.com/js/sdk.d22dd54b.js"></script>
+    <script src="//gg.yxd17.com/js/sdk.eabdcb45.js"></script>
 
     <!-- Styles -->
     <style>
@@ -108,8 +108,10 @@
         $.get('/order?money_id=' + money_id, function (data) {
 //            alert(JSON.stringify(data));
             YXD.pay(data, function (result) {
-                window.reload()
-            })
+                if (result.code == 0) {
+                    window.location.reload();
+                }
+            });
         });
     });
 </script>
