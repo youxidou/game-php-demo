@@ -9,8 +9,8 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    <script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
-    <script src="//192.168.101.77:9000/js/sdk.js"></script>
+    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script src="//gg.yxd17.com/js/sdk.d22dd54b.js"></script>
 
     <!-- Styles -->
     <style>
@@ -67,7 +67,7 @@
             margin-bottom: 30px;
         }
 
-        .chong{
+        .chong {
             margin-bottom: 10px;
         }
     </style>

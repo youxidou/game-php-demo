@@ -14,19 +14,16 @@ use Yxd\Game\Payment\Order;
 */
 
 Route::get('/', function () {
-    $user = user();
-    if (!$user) {
-        $config = config('pay');
-        $app = new Application($config);
+    $config = config('pay');
+    $app = new Application($config);
 
-        try {
-            $user = $app->user->get()->all();
-        } catch (\Exception $e) {
-            return '请先登录';
-        }
-
-        setUser($user);
+    try {
+        $user = $app->user->get()->all();
+    } catch (\Exception $e) {
+        return '请先登录';
     }
+
+    setUser($user);
 
     $user['money'] = money();
 
@@ -89,6 +86,8 @@ function user()
 
 function setUser($user)
 {
+    session()->setId(createSessionId($user['open_id']));
+    session()->start();
     session()->put('user', $user);
 }
 
@@ -113,4 +112,9 @@ function paySuccess($trade_no, $money)
     session()->setId($session_id);
     session()->start();
     incrementMoney($money);
+}
+
+function createSessionId($id)
+{
+    return md5($id) . '11111111';
 }
