@@ -10,7 +10,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
-    <script src="//gg.yxd17.com/js/sdk.eabdcb45.js"></script>
+    <script src="//gg.yxd17.com/js/sdk.js"></script>
 
     <!-- Styles -->
     <style>
